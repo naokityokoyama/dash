@@ -96,7 +96,7 @@ app.callback(Output("y-variable", "options"), [Input("x-variable", "value")])(
 )   
 
 if __name__ == '__main__':
-    app.run_server(port=8888)
+    app.run_server()
 
 
 
