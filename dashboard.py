@@ -19,6 +19,7 @@ controls = dbc.Card(
                 dbc.Label("Eixo X"),
                 dcc.Dropdown(
                     id="x-variable",
+                    value='precos',
                     options=[
                         {"label": col, "value": col} for col in dados
                     ]
@@ -31,6 +32,7 @@ controls = dbc.Card(
                 dbc.Label("Eixo Y"),
                 dcc.Dropdown(
                     id="y-variable",
+                    value='zona',
                     options=[
                         {"label": col, "value": col} for col in dados
                     ]
@@ -96,7 +98,7 @@ app.callback(Output("y-variable", "options"), [Input("x-variable", "value")])(
 )   
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(debug=True)
 
 
 
